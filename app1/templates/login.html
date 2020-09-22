@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <title>
+    login
+  </title>
+<head>
+
+  <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="/static/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+   <link href="/static/dist/css/sb-admin-2.css" rel="stylesheet">
+   <link href="/static/vendor/morrisjs/morris.css" rel="stylesheet">
+   <link href="/static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <style>
+    body{
+      background-color: white;
+      background-image: url("https://png.pngtree.com/thumb_back/fh260/back_pic/02/65/63/65578876d4f20e9.jpg");
+      /*background-size:cover;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;*/
+      min-height: 100%;
+      height:100%;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+      min-width: 100%;
+      margin: 0px;
+      overflow: hidden;
+
+
+    }
+    cd{
+      margin-left: 10px;
+    }
+    hr.style-three {
+height: 30px;
+border-style: solid;
+border-color: black;
+border-width: 0 0 1px 0;
+border-radius: 30px;
+
+}
+hr.style-three:before {
+display: block;
+content: "";
+height: 30px;
+margin-top: -31px;
+border-style: solid;
+border-color: black;
+border-width: 0 0 1px 0;
+border-radius: 20px;
+padding-right: 10px;
+}
+.w3-allerta {
+  font-family: "Allerta Stencil", Sans-serif;
+}
+  </style>
+  <body>
+    {% if message %}
+    <script type="text/javascript">
+        var message = '{{message}}'
+        alert(message);
+    </script>
+    {% endif %}
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0; background-color:#8D4195;">
+        <div class="navbar-header" >
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+            </button>
+            <div class="w3-black w3-center w3-allerta" style="background-color:#8D4195;">
+              <p class="w3-xxxlarge" style="background:#8D4195;">&nbsp Library</p>
+            </div>
+        </div>
+      </nav>
+    <div class="row">
+      <div class="col-sm-4">
+      </div>
+      <div class="col-sm-4"style="background-color:white;margin-top:150px;border-radius:8px;padding-top: 40px;padding-left:60px;">
+        <form action = "/login/" method="post" style="margin-right: 10px;">
+          Username : <input type = "text" name = "Username" class="w3-panel w3-round-xlarge w3-white">
+          <br><br>
+          Password : <input type = "password" name = "Password" class="w3-panel w3-round-xlarge w3-white">
+          <br><br><br>
+          <input type = "Submit" name = "click" class="btn btn-danger" style="margin-left:80px;" value="Login">
+          <cd>or</cd>
+          <a href="/register" class="btn btn-warning" style="margin-left:10px;">Register</a>
+          <br><br>
+          <hr class="style-three">
+
+        </form>
+      </div>
+      <div class="col-sm-4">
+      </div>
+    </div>
+
+  </body>
+</head>
+</html>

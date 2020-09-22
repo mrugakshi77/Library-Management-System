@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <title>
+    add_books
+  </title>
+</html>
+<head>
+  <style>
+    body {
+      background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/B1eYNZGrripnnry82/on-the-table-at-library-blurred-background_srzsdgyye_thumbnail-full01.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      overflow: hidden;
+    }
+  </style>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+  <body>
+    {% if message %}
+      {{message}}
+      {% endif %}
+    <form action = "/add_books/" method="post" align="center" style="background-color:white;margin-top:90px;border-radius:25px;padding-top: 50px;padding-bottom: 50px;margin-left:600px;margin-right: 600px;margin-bottom:300px ">
+      Name : <input type = "text" name = "Name" class="w3-panel w3-round-xlarge w3-white">
+      <br><br>
+      Author : <input type = "text" name = "Author" class="w3-panel w3-round-xlarge w3-white">
+      <br><br>
+      no_of_copies : <input type = "number" name = "no_of_copies" min = "1" max = "1000" class="w3-panel w3-round-xlarge w3-white">
+      <br><br>
+      subject : <input type = "text" name = "subject" class="w3-panel w3-round-xlarge w3-white">
+      <br><br>
+      summary : <input type="text" name="summary" class="w3-panel w3-round-xlarge w3-white">
+      <br><br>
+      <input type = "Submit" name = "click">
+    </form>
+  </body>
+</html>
